@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+body{
+    background-image: url("./clipboard-landing-page-master/images/bg-header-desktop.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/* image laptop  */
+.laptop{
+    background-image: url("./clipboard-landing-page-master/images/image-computer.png");
+    height: 100vh;
+    background-size: 600px auto;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -40px;
+    width: 600px;
+    left: -40px;
+    color: rgba(227, 227, 220, 0.895);
+    animation: fadeFromLeft 4s ease forwards;
+}
+.logo:hover path{
+    fill: hsl(171, 66%, 44%);
+    cursor: pointer;
+}
+.c-logo{
+    animation: popUp 2s ease forwards;
+}
+.btn{
+    animation: shake 1.5s ease-in-out infinite;
+}
+/* shake  */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+/* fade from left  */
+
+@keyframes fadeFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* pop up  */
+@keyframes popUp {
+    0% {
+        opacity: 0; /* Initially hidden */
+        transform: scale(0.5); /* Scaled down */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+        transform: scale(1); /* Normal size */
+    }
+}
